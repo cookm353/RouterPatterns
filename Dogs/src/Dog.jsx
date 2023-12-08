@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import DogDetails from "./DogDetails"
 import { v4 as uuidv4 } from "uuid"
 
 const Dog = () => {

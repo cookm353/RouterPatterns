@@ -1,19 +1,21 @@
-import { Route, Switch, Redirect } from "react-router-dom"
-import DogList from "./DogList"
+import { Route, Routes, Navigate } from "react-router-dom"
+// import DogList from "./DogList"
 import Dog from "./Dog"
 
-const Routes = () => {    
+const RouteList = () => {    
     return (
-        <Switch>
-            <Route exact path="/dogs/:dogName">
-                <Dog/>
-            </Route>
-            <Route exact path="/dogs">
-                <DogList/>
-            </Route>
-            <Redirect to="/dogs" />
-        </Switch>
+        <Routes>
+            {/* <Route exact path="/dogs" element={<DogList/>}/> */}
+            <Route 
+                exact path="/dogs/:dogName"
+                element={<Dog/>}
+            />
+            <Route
+                path=""
+                element={<Navigate to="/dogs" replace />}
+            />
+        </Routes>
     )
 }
 
-export default Routes
+export default RouteList

@@ -2,7 +2,8 @@ import Nav from "./Nav"
 
 const DogList = () => {
     return (
-        <Nav/>
+        <></>
+        // <Nav/>
         // <div className="dogListDiv">
         //     <h1>Foo</h1>
         // </div>
